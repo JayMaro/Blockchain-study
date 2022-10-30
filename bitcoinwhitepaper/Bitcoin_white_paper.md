@@ -146,3 +146,7 @@ precludes this method, but privacy can still be maintained by breaking the flow 
 another place: by keeping public keys anonymous
 
 모든 거래는 공개되어야 하기 때문에 이러한 방법은 불가능하지만, 공개키 익명성을 보존해 다른 장소에 있는 정보의 흐름을 끊는 것으로 프라이버시가 여전히 보장될 수 있다.
+
+## 참고한 자료
+한 번에 끝내는 블록체인 개발 A to Z
+https://bitcoin.org/bitcoin.pdf

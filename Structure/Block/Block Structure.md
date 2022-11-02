@@ -54,7 +54,22 @@ https://steemit.com/kr/@niipoong/bitcoin-tx-and-block-store-process
 이전 Block의 Hash와 Merkel Root의 Hash 값을 통해 그 전 데이터들의 유효성을 검증
 -> 이전 데이터로 새로운 데이터 생성 -> 블록체인
 
+## 채굴 과정
+1) 새로운 블록(a)이 생성됨을 알림받는다.
+2) 다음 블록 생성을 위해서 임시 Pending 중인 Transaction을 포함한다.
+3) CoinBase 거래를 임시 블록에 포함한다.
+4) 이전 블록(a)와 Transaction들을 포함한 임시 Block구조(b)를 만든다.
+5) 새로운 Block(b)의 Header Hash가 결과값이 나올 때 까지 brute force 방식으로 nonce를 찾는다.
 
+## 채굴 보상
+- Block 채굴에 성공하게 되면 Block Reward(신규 발행)와 Transaction Fee를 Coinbase를 통해 채굴자가 얻게 됨
+- Bitcoin 발행량은 2100만개로 제한
+- Block Reward는 4년마다 반감기를 통해 보상이 감소
+   - 50BTC(2009년) → 25 BTC(2013년) → 12.5 BTC(2017년) → 6.25 BTC(2021년) ...
+- 2050년 이후로는 블록 신규 발행이 없으므로 채굴자들은 Transaction Fee만 블록 생성 보상으로 가져가게 됨
+
+## Mining Pool
+![Mining Pool.png](Mining Pool.png)
 
 ## 참고한 자료
 한 번에 끝내는 블록체인 개발 A to Z
